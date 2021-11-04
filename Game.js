@@ -1,10 +1,10 @@
 class Game {
   constructor() {
     this.background = new Image();
-    this.background.src = "./images/background.png";
+    this.background.src = "../images/background.png";
     this.mao = new Mao();
     //this.landlord = new landlord(); //
-    this.landlordArr = [new Landlord("./images/landlord.png")];
+    this.landlordArr = [new Landlord("../images/landlord.png")];
     this.gameHappening = true;
     this.currentMinute = 1;
     this.currentSecond = 0;
@@ -55,7 +55,7 @@ class Game {
     let lastIndex = this.landlordArr.length - 1;
     let lastLandlord = this.landlordArr[lastIndex];
     if (lastLandlord.landlordY > 200) {
-      this.landlordArr.push(new Landlord("./images/landlord.png"));
+      this.landlordArr.push(new Landlord("../images/landlord.png"));
     }
   };
 

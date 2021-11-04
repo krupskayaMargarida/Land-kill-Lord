@@ -1,7 +1,7 @@
 class Mao {
   constructor() {
     this.Maoimg = new Image();
-    this.Maoimg.src = "/images/mao.png";
+    this.Maoimg.src = "../images/mao.png";
     this.width = 60;
     this.height = 60;
     this.MaoX = canvas.width / 50;
