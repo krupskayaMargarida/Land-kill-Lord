@@ -4,15 +4,12 @@ class Game {
     this.background.src = "./images/background.png";
     this.mao = new Mao();
     //this.landlord = new landlord(); //
-    this.landlordArr = [new Landlord("./images/landlordbk.png")];
+    this.landlordArr = [new Landlord("./images/landlord.png")];
     this.gameHappening = true;
-    this.currentMinute = 3;
+    this.currentMinute = 1;
   }
 
   //methods
-  //! how to add more landlords and how!
-
-  //! last element of array
 
   getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
@@ -27,7 +24,7 @@ class Game {
   }
 
   initializeClock() {
-    let endtime = this.addMinutes(3);
+    let endtime = this.addMinutes(1);
     const timeinterval = setInterval(() => {
       const t = this.getTimeRemaining(endtime);
       this.currentMinute = t.minutes;
@@ -56,7 +53,7 @@ class Game {
     let lastIndex = this.landlordArr.length - 1;
     let lastLandlord = this.landlordArr[lastIndex];
     if (lastLandlord.landlordY > 200) {
-      this.landlordArr.push(new Landlord("./images/landlordbk.png"));
+      this.landlordArr.push(new Landlord("./images/landlord.png"));
     }
   };
 
@@ -67,12 +64,10 @@ class Game {
     //2. changes in elements and movements
     //this.landlord.landlordMove(); //
     this.landlordArr.forEach((eachLandlord) => {
-      if (this.currentMinute === 3 || this.currentMinute === 2) {
+      if (this.currentMinute === 1 || this.currentMinute === 0.5) {
         eachLandlord.landlordMove(2);
-      } else if (this.currentMinute === 1) {
-        eachLandlord.landlordMove(4);
       } else if (this.currentMinute === 0) {
-        eachLandlord.landlordMove(6);
+        eachLandlord.landlordMove(3);
       }
     });
     this.addlandies();
@@ -97,8 +92,12 @@ class Game {
 
   resetGame = () => {
     this.gameHappening = false;
+    canvas.style.display = "none";
+    gameOver.style.display = "flex";
+    score.style.display = "none";
+    clock.style.display = "none";
+    rule.style.display = "none";
   };
 }
 
 //! PROF - document.addEventListener ("Load", function () {
-//  startGame()

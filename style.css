@@ -1,33 +1,30 @@
 
 
 
-
-
-
-
 body {
     color: red;
     background-color:black;
+
 
 }
   
 #historyh1 {
 
-    color: grey;
-    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+
+
 }
-
-
 #my-canvas {
     background-color:lightgray;
-
+    
 }
 
 #start-btn, #restart-btn {
-
+    font-family: Arial, Helvetica, sans-serif;
     background-color:rgb(167, 29, 29);
     color:white;
-    font-size:10px;
+    font-size:20px;
     padding:20px;
     margin-top: 40px ;
 }
@@ -46,6 +43,10 @@ body {
     margin: 40px 0;
 }
 
+#rule {
+    display: none; 
+}
+
 #game-over {
    display: none;
 }
@@ -59,4 +60,30 @@ body {
     margin-top: 50px;
     margin-bottom: 30px;
 }
+ #centrar {
 
+    font-family: 'roboto';
+     display: flex;
+     width: 60%;
+     flex-direction: column;
+     margin:auto;
+     text-align: center;
+     line-height: 1.8em;
+     font-weight: bold;
+ }
+
+ #centrar h5 {
+     text-align: center;
+ }
+ #rule {
+
+    font-family:fantasy;
+    font-size: 2em;
+ }
+
+ #Mao-IMAGE {
+
+    height: 70vh;
+    width:40vw;
+ }
+ 
