@@ -7,6 +7,7 @@ class Game {
     this.landlordArr = [new Landlord("./images/landlord.png")];
     this.gameHappening = true;
     this.currentMinute = 1;
+    this.currentSecond = 0;
   }
 
   //methods
@@ -28,6 +29,7 @@ class Game {
     const timeinterval = setInterval(() => {
       const t = this.getTimeRemaining(endtime);
       this.currentMinute = t.minutes;
+      this.currentSecond = t.seconds;
       clock.innerHTML = t.minutes + ":" + t.seconds;
       if (t.total <= 0) {
         if (this.mao.getScore() < 100) {
@@ -64,9 +66,14 @@ class Game {
     //2. changes in elements and movements
     //this.landlord.landlordMove(); //
     this.landlordArr.forEach((eachLandlord) => {
-      if (this.currentMinute === 1 || this.currentMinute === 0.5) {
+      if (
+        this.currentMinute === 1 ||
+        (this.currentMinute === 0 &&
+          this.currentSecond <= 59 &&
+          this.currentSecond > 30)
+      ) {
         eachLandlord.landlordMove(2);
-      } else if (this.currentMinute === 0) {
+      } else {
         eachLandlord.landlordMove(3);
       }
     });
@@ -91,6 +98,7 @@ class Game {
   };
 
   resetGame = () => {
+    gameOverMusic();
     this.gameHappening = false;
     canvas.style.display = "none";
     gameOver.style.display = "flex";

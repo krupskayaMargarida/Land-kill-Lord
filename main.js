@@ -28,7 +28,7 @@ const backGroundMusic = () => {
 const gameOverMusic = () => {
   overMusic = new Audio("/music/mixkit-game-over-trombone-1940.wav");
   canvasMusic.pause();
-  overMusic.loop = true;
+  overMusic.loop = false;
   overMusic.play();
 };
 
