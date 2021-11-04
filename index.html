@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LANDKILL-LORD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="BEGGINING" class="container">
+        <img src="/images/tiger-logo.png" width="400" height="300" alt="logo" />
+
+        <h5 id="historyh1">Historical context:</h5>
+        <p>
+          The Land Reform Movement was a campaign by the Chinese Communist Party
+          (CCP) leader Mao Zedong during the late phase of the Chinese Civil
+          War.
+        </p>
+        <p>
+          The campaign involved the murder of landlords by exploited peasants
+          and land redistribution to the peasantry.
+        </p>
+        <button id="start-btn">LET'S KILL SOME PARASITES!</button>
+      </div>
+      <div class="container">
+        <h1 id="score">SCORE: <span id="points">0</span></h1>
+        <span id="rule">You have 3 minutes to kill 100 landlords</span>
+        <h1 id="clockdiv"></h1>
+        <canvas id="my-canvas" width="600" height="400"></canvas>
+      </div>
+      <div id="game-over" class="container">
+        <img src="/images/game-over.png" width="150" alt="" />
+        <button id="restart-btn">KILL AGAIN!</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="Game.js"></script>
+    <script src="Mao.js"></script>
+    <script src="landlordShit.js"></script>
+  </body>
+</html>
