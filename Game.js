@@ -32,7 +32,7 @@ class Game {
       this.currentSecond = t.seconds;
       clock.innerHTML = t.minutes + ":" + t.seconds;
       if (t.total <= 0) {
-        if (this.mao.getScore() < 100) {
+        if (this.mao.getScore() < 50) {
           // TODO -> GAME OVER
           console.log("GAME OVER");
         } else {
