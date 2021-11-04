@@ -20,13 +20,13 @@ let overMusic;
 
 //FUNCTIONS
 const backGroundMusic = () => {
-  canvasMusic = new Audio("/music/y2mate.com - Carvalhesa PCP.mp3");
+  canvasMusic = new Audio("/MAO-GAME/music/y2mate.com - Carvalhesa PCP.mp3");
   canvasMusic.loop = true;
   canvasMusic.play();
 };
 
 const gameOverMusic = () => {
-  overMusic = new Audio("/music/mixkit-game-over-trombone-1940.wav");
+  overMusic = new Audio("/MAO-GAME/music/mixkit-game-over-trombone-1940.wav");
   canvasMusic.pause();
   overMusic.loop = false;
   overMusic.play();
